@@ -1,5 +1,5 @@
 [project]
-name = "polarion-mcp"
+name = "polarion-mcp-vp"
 version = "0.1.0"
 description = "Native async Polarion REST API MCP server"
 readme = "README.md"
@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [project.scripts]
-polarion-mcp = "polarion_mcp.server:main"
+polarion-mcp-vp = "polarion_mcp.server:main"
 
 [dependency-groups]
 dev = [

@@ -27,7 +27,7 @@ def _api(fn: Callable[..., Awaitable[Any]]):
     return wrapped
 
 
-mcp = FastMCP("polarion-mcp", instructions="Polarion ALM REST API tools based on PolarionMcpServers reference implementation.")
+mcp = FastMCP("polarion-mcp-vp", instructions="Polarion ALM REST API tools based on PolarionMcpServers reference implementation.")
 
 
 def _register(name: str, fn: Callable[..., Awaitable[Any]], **defaults: Any) -> None:

@@ -1,4 +1,4 @@
-# Polarion MCP
+# polarion-mcp-vp
 
 An async Python MCP server adapting the tool surface of `PolarionMcpServers-0.16.0` to Polarion’s REST API. It supports stdio, SSE, and streamable HTTP transports and can select one of multiple configured Polarion projects by alias.
 
@@ -31,7 +31,7 @@ The reference configuration format is supported through `appsettings.json`:
 ```bash
 cd polarion-mcp
 uv sync
-POLARION_PASSWORD='secret' uv run polarion-mcp
+POLARION_PASSWORD='secret' uv run polarion-mcp-vp
 ```
 
 Select a configured alias with `POLARION_PROJECT=alias`. The MCP tools mirror the reference implementation, including document, section, work-item, revision, type, and search operations.
