@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "polarion-v*"
+
+jobs:
+  publish:
+    name: Publish Polarion package
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Build distribution
+        run: uv build
+
+      - name: Publish distribution to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
